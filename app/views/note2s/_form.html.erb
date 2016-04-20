@@ -1,0 +1,27 @@
+<%= form_for(note2) do |f| %>
+  <% if note2.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(note2.errors.count, "error") %> prohibited this note2 from being saved:</h2>
+
+      <ul>
+      <% note2.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :note %>
+    <%= f.text_area :note %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
