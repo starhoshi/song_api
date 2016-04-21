@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :media_histories
   resources :users
   resources :songs
   resources :note3s

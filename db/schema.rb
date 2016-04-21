@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160420152329) do
+ActiveRecord::Schema.define(version: 20160421141434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "media_histories", force: :cascade do |t|
+    t.text     "media_id"
+    t.text     "track_source"
+    t.text     "album"
+    t.text     "artist"
+    t.integer  "duration"
+    t.text     "genre"
+    t.text     "album_art_uri"
+    t.text     "title"
+    t.integer  "track_number"
+    t.integer  "num_tracks"
+    t.date     "recorded_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "accuracy"
+    t.float    "altitude"
+    t.integer  "type"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "note2s", force: :cascade do |t|
     t.string   "title"
@@ -33,6 +54,20 @@ ActiveRecord::Schema.define(version: 20160420152329) do
   create_table "notes", force: :cascade do |t|
     t.string   "title"
     t.text     "note"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "album"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
