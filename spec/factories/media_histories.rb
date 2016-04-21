@@ -10,11 +10,10 @@ FactoryGirl.define do
     title "MyText"
     track_number 1
     num_tracks 1
-    recorded_at "2016-04-21"
+    recorded_at "2016-04-22"
     latitude 1.5
     longitude 1.5
     accuracy 1.5
     altitude 1.5
-    type 1
   end
 end

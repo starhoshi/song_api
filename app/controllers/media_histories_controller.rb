@@ -48,6 +48,6 @@ class MediaHistoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def media_history_params
-      params.require(:media_history).permit(:media_id, :track_source, :album, :artist, :duration, :genre, :album_art_uri, :title, :track_number, :num_tracks, :recorded_at, :latitude, :longitude, :accuracy, :altitude, :type)
+      params.require(:media_history).permit(:media_id, :track_source, :album, :artist, :duration, :genre, :album_art_uri, :title, :track_number, :num_tracks, :recorded_at, :latitude, :longitude, :accuracy, :altitude)
     end
 end

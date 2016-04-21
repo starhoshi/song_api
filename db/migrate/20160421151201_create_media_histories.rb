@@ -16,7 +16,6 @@ class CreateMediaHistories < ActiveRecord::Migration[5.0]
       t.float :longitude
       t.float :accuracy
       t.float :altitude
-      t.integer :type
 
       t.timestamps
     end
